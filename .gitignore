@@ -1,0 +1,11 @@
+.env
+node_modules/
+target/
+api/logs/
+*.log
+*.pem
+*.key
+.envrc
+/logs
+/data
+

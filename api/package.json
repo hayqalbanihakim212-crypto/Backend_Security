@@ -1,0 +1,19 @@
+{
+  "name": "qx-api",
+  "version": "0.3.0",
+  "private": true,
+  "type": "module",
+  "description": "Zero-data multi-tenant qX preflight security gate for third-party frontends",
+  "engines": { "node": ">=20.6" },
+  "scripts": {
+    "start": "node src/server.js",
+    "dev": "node --watch --env-file=../.env src/server.js",
+    "test": "node --test test/security.test.mjs"
+  },
+  "dependencies": {
+    "express": "^4.21.2",
+    "express-rate-limit": "^7.5.0",
+    "helmet": "^8.0.0",
+    "zod": "^3.24.1"
+  }
+}

@@ -1,0 +1,21 @@
+[package]
+name = "qx-core"
+version = "0.2.0"
+edition = "2021"
+description = "qX security core: argon2id + rotation challenge + Ed25519 security passport signer"
+
+[dependencies]
+axum = { version = "0.7", default-features = false, features = ["http1", "json", "tokio"] }
+tokio = { version = "1", features = ["rt-multi-thread", "macros", "net", "sync", "signal"] }
+serde = { version = "1", features = ["derive"] }
+serde_json = "1"
+argon2 = "0.5"
+rand = "0.8"
+subtle = "2"
+ed25519-dalek = { version = "2.1", features = ["rand_core"] }
+base64 = "0.22"
+
+[profile.release]
+lto = true
+codegen-units = 1
+strip = true
